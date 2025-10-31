@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const defaultOrigins = process.env.NODE_ENV === 'production'
-    ? ['https://your-domain.com', 'https://admin.your-domain.com']
+    ? ['https://aboi-admin-panel-qpza54uia-odinternational04s-projects.vercel.app', 'https://aboi-admin-panel.vercel.app']
     : ['http://localhost:5173', 'http://localhost:5174'];
 
 const envOrigins = process.env.ALLOWED_ORIGINS
