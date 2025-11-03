@@ -21,7 +21,8 @@ const defaultOrigins = process.env.NODE_ENV === 'production'
         'https://aboi-admin-panel-qpza54uia-odinternational04s-projects.vercel.app',
         'https://aboi-admin-panel-k242hic86-odinternational04s-projects.vercel.app',
         'https://aboi-admin-panel.vercel.app',
-        'https://aboi-backend-79tbaugmg-odinternational04s-projects.vercel.app'
+        'https://aboi-backend-79tbaugmg-odinternational04s-projects.vercel.app',
+        'https://aboi-admin-panel-new.vercel.app'
       ]
     : ['http://localhost:5173', 'http://localhost:5174'];
 
