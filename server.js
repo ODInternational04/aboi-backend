@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 3001;
 const defaultOrigins = process.env.NODE_ENV === 'production'
     ? [
         'https://aboi-admin-panel-qpza54uia-odinternational04s-projects.vercel.app',
+        'https://aboi-admin-panel-k242hic86-odinternational04s-projects.vercel.app',
         'https://aboi-admin-panel.vercel.app',
         'https://aboi-backend-79tbaugmg-odinternational04s-projects.vercel.app'
       ]
@@ -39,7 +40,11 @@ app.use(cors({
             return callback(null, true);
         }
 
-        if (allowedOrigins.includes(origin)) {
+        // Check if origin matches allowed origins or is a Vercel preview deployment
+        const isAllowed = allowedOrigins.includes(origin) || 
+                         origin.includes('odinternational04s-projects.vercel.app');
+
+        if (isAllowed) {
             return callback(null, true);
         }
 
